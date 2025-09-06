@@ -23,7 +23,7 @@ LOG_FILE = DATA_DIR / "chats.jsonl"
 VERIFY_TOKEN = os.getenv("VERIFY_TOKEN", "verify_me")
 WHATSAPP_TOKEN = os.getenv("WHATSAPP_TOKEN", "")
 WHATSAPP_PHONE_ID = os.getenv("WHATSAPP_PHONE_ID", "")
-MODEL_NAME = os.getenv("MODEL_NAME", "llama3-8b-8192")
+MODEL_NAME = os.getenv("MODEL_NAME", "llama-3.3-70b-versatile")
 
 # Cliente Groq
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
@@ -119,6 +119,7 @@ def verify_whatsapp_cloud():
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))  # Render asigna el puerto en la variable PORT
     app.run(host="0.0.0.0", port=port, debug=True)
+
 
 
 
