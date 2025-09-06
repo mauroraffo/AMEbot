@@ -117,4 +117,7 @@ def verify_whatsapp_cloud():
 
 # ---- Main ----
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    port = int(os.getenv("PORT", 8000))  # Render asigna el puerto en la variable PORT
+    app.run(host="0.0.0.0", port=port, debug=True)
+
+
